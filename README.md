@@ -109,7 +109,8 @@ On two real 4-layer boards of about 100 parts each, filling 41 % and 51 % of the
   the spring guess works best. A cool start can't move a whole group across the board, and on the fuller board it
   left parts overlapping.
 - **Routed comparison:** routed with Freerouting under the same conditions as the hand layouts, the best placements
-  were as complete, used the same or fewer signal vias, and needed 7–15 % less track.
+  needed 7–15 % less track. Completion and via counts were within Freerouting's run-to-run variation: the same board
+  routed three times ranged over 0–2 unrouted connections and ±3 % signal vias.
 
 ## Layout
 
