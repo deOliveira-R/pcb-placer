@@ -1,0 +1,25 @@
+[build-system]
+requires = ["flit_core>=3.7"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "pcb-placer"
+dynamic = ["version", "description"]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [{name = "Rodrigo de Oliveira", email = "deOliveira.R@outlook.com"}]
+keywords = ["pcb", "placement", "kicad", "simulated-annealing", "force-directed", "eda"]
+dependencies = ['tomli>=1.1; python_version < "3.11"']
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Source = "https://github.com/deOliveira-R/pcb-placer"
+
+[tool.flit.module]
+name = "pcb_placer"

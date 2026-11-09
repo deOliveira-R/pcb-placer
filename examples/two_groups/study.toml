@@ -1,0 +1,40 @@
+# A small synthetic board: a connector, a 'power' group with a surge islet, a 'signal' group, a two-faced part.
+#   python -m pcb_placer study examples/two_groups/study.toml
+problem = "problem.json"
+out = "results"
+seeds = 4
+title = "two groups"
+reference_name = "starting placement"
+
+[defaults]
+start = "springs"
+island = 10.0
+temps = 60
+per_part = 30
+
+[conditions.flat]
+name = "flat springs, warm"
+island = 1.0
+
+[conditions.rules]
+name = "island springs, bands + separation, warm"
+bands = 2.0
+separation = 2.0
+
+[conditions.random]
+name = "random start, bands + separation, hot"
+start = "random"
+accept0 = 0.8
+bands = 2.0
+separation = 2.0
+
+[[sweeps]]
+base = "rules"
+separation = [0.5, 4.0]
+
+[plot]
+legend = [["power", "power"], ["signal", "signal"], ["status", "status"]]
+[plot.palette]
+power = "#d9534f"
+signal = "#5b8def"
+status = "#9b59b6"
